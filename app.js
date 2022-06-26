@@ -22,6 +22,10 @@ app.use((req, res, next) => {
     next();
   });
 
+app.get("/",(req,res)=>{
+  res.status(200).send("Server Working")
+})
+
 
 app.post("/login",(req,res)=>{
     const {email,password} = req.body
