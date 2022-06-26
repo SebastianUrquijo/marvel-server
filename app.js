@@ -26,7 +26,7 @@ app.use((req, res, next) => {
 app.post("/login",(req,res)=>{
     const {email,password} = req.body
     if(!email || !password) return res.status(200).send({msg:"Missing data"})
-    if(email === USER_EMAIL && password === USER_PASSWORD){return res.status(200).send({msg:"Login success"})}
+    if(email === USER_EMAIL && password === USER_PASSWORD){return res.status(200).send({msg:"Login success", data:{name:"Pedro",last_name:"Montana",email:"pepomon@mail.com"}},)}
     res.status(200).send({msg:"Email or Password does not match"})
 })
 
