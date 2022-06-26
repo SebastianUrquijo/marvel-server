@@ -34,6 +34,6 @@ app.post("/login",(req,res)=>{
     res.status(200).send({msg:"Email or Password does not match"})
 })
 
-app.listen(3001,()=>{
+app.listen(process.env.PORT || 3001,()=>{
     console.log("server running on Port",3001);
 });
