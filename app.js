@@ -9,8 +9,6 @@ const {
     USER_EMAIL, USER_PASSWORD
   } = process.env;
 
-console.log(USER_EMAIL)
-
 app.name = "MarvelAPI"
 
 app.use(bodyParser.urlencoded({ extended: true, limit: '50mb' }));
